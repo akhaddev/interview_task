@@ -45,4 +45,4 @@ def sync_cart_to_mongo(sender, instance, **kwargs):
 
 @receiver(post_delete, sender=Cart)
 def delete_cart_from_mongo(sender, instance, **kwargs):
-    MongoCart.objects(postgres_id=instance.id).delete()
+    MongoCart.objects.filter(postgres_id=instance.id).delete()

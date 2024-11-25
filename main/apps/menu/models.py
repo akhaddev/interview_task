@@ -56,4 +56,4 @@ def sync_menu_to_mongo(sender, instance, **kwargs):
 
 @receiver(post_delete, sender=Menu)
 def delete_menu_from_mongo(sender, instance, **kwargs):
-    MongoMenu.objects(postgres_id=instance.id).delete()
+    MongoMenu.objects.filter(postgres_id=instance.id).delete()

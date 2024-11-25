@@ -1,6 +1,6 @@
-![Django project](https://gitlab.com/Bobur/book.git)
+![Django project](https://github.com/akhaddev/interview_task)
 
-Interview Task Restaurant Ordering System backend
+Interview Task Restaurant Food Ordering System backend
 ============================
 
 
@@ -43,8 +43,8 @@ Folder Structure Conventions
 > Install virtual environment (optional):
 
 ```
-git clone git@github.com:ArtelCyberspaceUZ/online_marketplace.git
-cd online_marketplace
+git clone git@github.com:akhaddev/interview_task.git
+cd interview_task
 python -m venv --prompt="v" .env
 ```
 
@@ -74,3 +74,11 @@ docker exec -it <container_name> bin/bash
 ```
 
 - You should be good to go now
+
+
+### Setup (development)
+ 
+ This is a telegram bot screenshot, all orders that are ordered by clients send to telegram bot to inform restaurant employees
+
+
+![alt text](docs/image.png)

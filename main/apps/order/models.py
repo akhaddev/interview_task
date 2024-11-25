@@ -69,7 +69,7 @@ def sync_order_to_mongo(sender, instance, **kwargs):
 
 @receiver(post_delete, sender=Order)
 def delete_order_from_mongo(sender, instance, **kwargs):
-    MongoOrder.objects(postgres_id=instance.id).delete()
+    MongoOrder.objects.filter(postgres_id=instance.id).delete()
 
 
 @receiver(post_save, sender=OrderItem)
@@ -85,4 +85,4 @@ def sync_order_item_to_mongo(sender, instance, **kwargs):
 
 @receiver(post_delete, sender=OrderItem)
 def delete_order_item_from_mongo(sender, instance, **kwargs):
-    MongoOrderItem.objects(postgres_id=instance.id).delete()
+    MongoOrderItem.objects.filter(postgres_id=instance.id).delete()
